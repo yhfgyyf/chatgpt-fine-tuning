@@ -22,7 +22,8 @@ print(f"File {training_file.id} uploaded after {time.time() - start_time:.2f} se
 
 job=openai.FineTuningJob.create(
     training_file=training_file.id,
-    model="gpt-3.5-turbo-0613",   
+    model="gpt-3.5-turbo-0613",
+    n_epochs=2
 )
 
 #training
